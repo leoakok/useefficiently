@@ -4,34 +4,31 @@ import FilloutEmbed from "@/components/fillout";
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Schedule a Meeting with UseEfficiently";
-  const description = "Contact us for any questions or feedback you may have.";
+  const description = "Book a free 30-minute discovery call with our team.";
 
-  const metadata = {
-    title: title,
-    description: description,
+  return {
+    title,
+    description,
     openGraph: {
-      title: title,
-      description: description,
+      title,
+      description,
       url: information.website,
       type: "website",
       images: [
         {
-          url: information.website + "/api/og?title=" + title,
-          alt: information.company + " Logo",
+          url: `${information.website}/api/og?title=${title}`,
+          alt: `${information.company} Logo`,
         },
       ],
     },
-
     twitter: {
       card: "summary_large_image",
-      site: "@" + information.slug,
-      title: title,
-      description: description,
-      images: information.website + "/api/og?title=" + title,
+      site: `@${information.slug}`,
+      title,
+      description,
+      images: `${information.website}/api/og?title=${title}`,
     },
   };
-
-  return metadata;
 }
 
 export default function Page() {
