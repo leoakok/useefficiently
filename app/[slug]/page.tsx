@@ -50,7 +50,7 @@ export default function CustomerStory({ params }: Props) {
     <div className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <Link
-          href="/#stories"
+          href="/stories"
           className="text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           &larr; Back to stories
@@ -79,7 +79,7 @@ export default function CustomerStory({ params }: Props) {
 
         <div className="mt-16 pt-8 border-t border-border">
           <Link
-            href="/#stories"
+            href="/stories"
             className="text-sm font-medium hover:underline underline-offset-4"
           >
             &larr; Back to all stories

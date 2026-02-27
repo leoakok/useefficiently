@@ -7,9 +7,9 @@ export default function SiteFooter() {
       <div className="mx-auto max-w-5xl px-6 py-12">
         <div className="flex flex-col sm:flex-row justify-between items-start gap-8">
           <div>
-            <p className="font-medium tracking-tight">UseEfficiently</p>
+            <p className="font-medium tracking-tight">UseEfficiently LLC</p>
             <p className="text-sm text-muted-foreground mt-1">
-              Accredited Airtable Services Partner
+              Airtable Services Partner
             </p>
           </div>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -44,7 +44,7 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} UseEfficiently</p>
+          <p>&copy; {new Date().getFullYear()} UseEfficiently LLC</p>
         </div>
       </div>
     </footer>
