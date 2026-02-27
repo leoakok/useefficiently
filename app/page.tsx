@@ -5,7 +5,8 @@ import { FilloutButton } from "@/components/fillout";
 import FadeIn from "@/components/custom/fade-in";
 import ImpactCard from "@/components/custom/impact-card";
 import StoryCard from "@/components/custom/story-card";
-import PositionCard from "@/components/custom/position-card";
+import SpotlightCard from "@/components/custom/spotlight-card";
+import TiltCard from "@/components/custom/tilt-card";
 import { SiAirtable } from "react-icons/si";
 
 function IconGrid() {
@@ -205,24 +206,31 @@ export default function Page() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="flex flex-wrap gap-8 items-center mt-16 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground">Trusted by</p>
-              {customers.map((customer) => (
-                <Image
-                  key={customer.slug}
-                  width={100}
-                  height={32}
-                  src={customer.logo}
-                  alt={customer.name}
-                  className="opacity-30 hover:opacity-70 transition-opacity h-6 w-auto object-contain"
-                />
-              ))}
+            <div className="mt-12 flex flex-col sm:flex-row sm:items-center gap-6">
+              <Link
+                href="/stories"
+                className="text-sm font-medium hover:underline underline-offset-4"
+              >
+                View all customer stories&ensp;&rarr;
+              </Link>
+              <div className="flex flex-wrap gap-8 items-center">
+                {customers.map((customer) => (
+                  <Image
+                    key={customer.slug}
+                    width={100}
+                    height={32}
+                    src={customer.logo}
+                    alt={customer.name}
+                    className="opacity-25 hover:opacity-60 transition-opacity h-5 w-auto object-contain"
+                  />
+                ))}
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* ─── Why Airtable: Real positioning ─── */}
+      {/* ─── Why Airtable: Real positioning with SpotlightCards ─── */}
       <section id="why-airtable" className="py-24 px-6 bg-secondary/30">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
@@ -236,21 +244,45 @@ export default function Page() {
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <PositionCard
-                icon={<IconGrid />}
-                title="One platform, not ten"
-                description="Our clients used to scatter data across Zapier, Google Sheets, and email. Now everything — automations, interfaces, dashboards — lives in Airtable."
-              />
-              <PositionCard
-                icon={<IconTrendDown />}
-                title="96% cheaper at scale"
-                description="We migrated a client's Zapier workflows to native Airtable automations. Same results, a fraction of the cost."
-              />
-              <PositionCard
-                icon={<IconScale />}
-                title="Scales with your organization"
-                description="From 100 applicants to 130,000. Airtable grows with you — we make sure the system does too."
-              />
+              <SpotlightCard>
+                <div className="p-8">
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground mb-5">
+                    <IconGrid />
+                  </div>
+                  <h3 className="font-medium text-lg">One platform, not ten</h3>
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                    Our clients used to scatter data across Zapier, Google Sheets,
+                    and email. Now everything&nbsp;&mdash; automations, interfaces,
+                    dashboards&nbsp;&mdash; lives in Airtable.
+                  </p>
+                </div>
+              </SpotlightCard>
+              <SpotlightCard>
+                <div className="p-8">
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground mb-5">
+                    <IconTrendDown />
+                  </div>
+                  <h3 className="font-medium text-lg">96% cheaper at scale</h3>
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                    We migrated a client&rsquo;s Zapier workflows to native
+                    Airtable automations. Same results, a fraction of the cost.
+                  </p>
+                </div>
+              </SpotlightCard>
+              <SpotlightCard>
+                <div className="p-8">
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground mb-5">
+                    <IconScale />
+                  </div>
+                  <h3 className="font-medium text-lg">
+                    Scales with your organization
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                    From 100 applicants to 130,000. Airtable grows with
+                    you&nbsp;&mdash; we make sure the system does too.
+                  </p>
+                </div>
+              </SpotlightCard>
             </div>
           </FadeIn>
         </div>

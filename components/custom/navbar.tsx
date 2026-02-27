@@ -15,14 +15,20 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center gap-6">
           <Link
-            href="/#stories"
+            href="/services"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Services
+          </Link>
+          <Link
+            href="/stories"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Stories
           </Link>
           <Link
             href="/about"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:inline"
           >
             About
           </Link>
