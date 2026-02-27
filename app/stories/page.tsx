@@ -36,6 +36,13 @@ const metrics: Record<string, string> = {
 };
 
 export default function StoriesPage() {
+  const withContent = customers.filter(
+    (c) => c.detail && c.detail.trim().length > 0
+  );
+  const withoutContent = customers.filter(
+    (c) => !c.detail || c.detail.trim().length === 0
+  );
+
   return (
     <section className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
@@ -51,10 +58,10 @@ export default function StoriesPage() {
 
         <FadeIn delay={0.1}>
           <div className="mt-16 space-y-0">
-            {customers.map((customer) => (
+            {withContent.map((customer) => (
               <Link
                 key={customer.slug}
-                href={customer.detail ? `/${customer.slug}` : "#"}
+                href={`/${customer.slug}`}
                 className="group block"
               >
                 <div className="border-t border-border py-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8">
@@ -87,6 +94,30 @@ export default function StoriesPage() {
                 </div>
               </Link>
             ))}
+
+            {withoutContent.length > 0 && (
+              <>
+                {withoutContent.map((customer) => (
+                  <div key={customer.slug} className="border-t border-border py-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+                    <div className="w-24 shrink-0 flex items-center">
+                      <Image
+                        src={customer.logo}
+                        width={96}
+                        height={32}
+                        alt={customer.name}
+                        className="w-auto h-7 object-contain opacity-30"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h2 className="font-medium text-lg text-muted-foreground">
+                        {customer.name}
+                      </h2>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Story coming soon</p>
+                  </div>
+                ))}
+              </>
+            )}
             <div className="border-t border-border" />
           </div>
         </FadeIn>

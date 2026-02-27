@@ -64,15 +64,15 @@ export default function Page() {
                   <p className="text-sm text-muted-foreground mt-0.5">
                     {member.title} &middot; {member.address}
                   </p>
-                  {member.quote && (
+                  {member.quote ? (
                     <p className="text-muted-foreground mt-4 leading-relaxed max-w-lg">
                       {member.quote}
                     </p>
-                  )}
+                  ) : null}
                   <Link
                     href={member.linkedin}
                     target="_blank"
-                    className="text-sm font-medium mt-4 inline-block hover:underline underline-offset-4"
+                    className={`text-sm font-medium inline-block hover:underline underline-offset-4 ${member.quote ? "mt-4" : "mt-2"}`}
                   >
                     LinkedIn &rarr;
                   </Link>
