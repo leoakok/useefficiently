@@ -21,9 +21,18 @@ See `package.json` scripts. Summary:
 | Production build | `npm run build` |
 | Lint | `npm run lint` |
 
+### Architecture
+
+- `components/ui/` — shadcn primitives (Button, Card). Do not hand-edit; regenerate via shadcn CLI.
+- `components/custom/` — custom components (FadeIn scroll animation, Navbar, SiteFooter).
+- `components/fillout.tsx` — Fillout form integration (third-party embed, kept at root level).
+- `use.js` / `information.json` — all content and company metadata (hardcoded, no CMS).
+- Design: warm stone-based light palette with CSS variables (see `globals.css`). Dieter Rams inspired — minimal, functional, generous whitespace.
+
 ### Non-obvious notes
 
 - The dev server (`npm run dev`) supports hot reload. No restart needed after code changes.
 - Remote images from `cdn.useefficiently.com`, `dl.airtable.com`, `github.com`, and `picsum.photos` are configured in `next.config.mjs`. They require network access to load but the app still renders without them.
 - The `/schedule-meeting` page embeds a Fillout form that requires external network access to function.
 - `tsconfig.json` includes a likely typo entry `config.tss` in the `include` array — this does not break the build.
+- When killing the dev server, use `fuser -k 3000/tcp` rather than `lsof`/`kill` — the next-server child processes sometimes linger on the port.
