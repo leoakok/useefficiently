@@ -232,13 +232,4 @@ export const team = [
     pic: "https://cdn.useefficiently.com/lukas.jpeg",
     linkedin: "https://www.linkedin.com/in/lukas-kaiser-lk/",
   },
-  {
-    name: "Yunus Şen",
-    title: "Solution Consultant",
-    address: "Istanbul, Turkiye",
-    quote:
-      "",
-    pic: "https://cdn.useefficiently.com/yunus.jpeg",
-    linkedin: "https://www.linkedin.com/in/yunuseshen/",
-  },
 ];

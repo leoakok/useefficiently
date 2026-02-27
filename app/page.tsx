@@ -74,21 +74,21 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
               <div className="lg:col-span-3">
                 <h2 className="text-3xl sm:text-4xl font-medium tracking-tight leading-tight">
-                  Türkiye Entrepreneurship Foundation
+                  PublicSquare
                 </h2>
                 <p className="mt-6 text-muted-foreground leading-relaxed">
-                  Turkey&rsquo;s largest entrepreneurship foundation runs three
-                  national programs, including the Young Talent Program — 130,000+
-                  applications a year, a five-stage evaluation with 100+ jury
-                  members, and thousands of automated emails. They needed a system
-                  that could handle all of it.
+                  A private fintech company based in Brisbane, Australia.
+                  They needed a system that could handle complex workflows
+                  across their entire operation. Image processing, SMS and
+                  email campaigns, internal workflow optimizations, all
+                  running on autopilot.
                 </p>
                 <p className="mt-4 text-foreground">
-                  We built the whole thing on Airtable. It&rsquo;s been running
-                  since.
+                  We built over 200 automations processing 40,000+ tasks
+                  every month. And we&rsquo;re still adding more.
                 </p>
                 <Link
-                  href="/girvak"
+                  href="/publicsquare"
                   className="inline-block mt-6 text-sm font-medium hover:underline underline-offset-4"
                 >
                   Read the full story &rarr;
@@ -97,10 +97,10 @@ export default function Page() {
               <div className="lg:col-span-2">
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { number: "130,000+", label: "applications / year" },
-                    { number: "100+", label: "jury evaluators" },
-                    { number: "5", label: "evaluation stages" },
-                    { number: "3", label: "national programs" },
+                    { number: "200+", label: "automations running" },
+                    { number: "40,000+", label: "tasks per month" },
+                    { number: "96%", label: "cost reduction" },
+                    { number: "24/7", label: "automated operations" },
                   ].map((metric) => (
                     <div
                       key={metric.label}
@@ -132,22 +132,19 @@ export default function Page() {
           <FadeIn delay={0.1}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <StoryCard
-                title="PublicSquare"
-                description="200+ automations processing 40,000+ tasks monthly for a fintech company in Australia."
-                href="/publicsquare"
-                variant="nodes"
+                title="Türkiye Entrepreneurship Foundation"
+                description="130,000+ applications a year across three national programs, all managed on Airtable."
+                href="/girvak"
               />
               <StoryCard
                 title="Yetkin Gençler"
                 description="Managing 10,000+ applicants and 2,000 participants per cohort for a tech education program in Turkey."
                 href="/yetgen"
-                variant="waves"
               />
               <StoryCard
                 title="Google Game & App Academy"
                 description="A four-stage application process for 50,000+ annual applicants, built in collaboration with Google."
                 href="/oua"
-                variant="blocks"
               />
             </div>
           </FadeIn>
@@ -185,7 +182,7 @@ export default function Page() {
                 <h3 className="font-medium">One place for everything</h3>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
                   Most of our clients came to us with data in five different
-                  tools. We moved it all into Airtable — automations, interfaces,
+                  tools. We moved it all into Airtable: automations, interfaces,
                   dashboards, and the data itself.
                 </p>
               </div>
@@ -193,7 +190,7 @@ export default function Page() {
                 <h3 className="font-medium">Much cheaper at scale</h3>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
                   One client was spending a lot on Zapier. We migrated their
-                  workflows to native Airtable automations — same results, 96%
+                  workflows to native Airtable automations. Same results, 96%
                   less cost.
                 </p>
               </div>
@@ -201,7 +198,7 @@ export default function Page() {
                 <h3 className="font-medium">It actually scales</h3>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
                   We&rsquo;ve seen Airtable handle 100 applicants and 130,000
-                  applicants in the same system. It grows with you — we make sure
+                  applicants in the same system. It grows with you, and we make sure
                   the architecture supports it.
                 </p>
               </div>

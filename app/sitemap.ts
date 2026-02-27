@@ -29,6 +29,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://useefficiently.com/tools",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://useefficiently.com/tools/airtable",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://useefficiently.com/tools/fillout",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://useefficiently.com/schedule-meeting",
       changeFrequency: "monthly",
       priority: 0.8,

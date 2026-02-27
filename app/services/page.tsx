@@ -30,7 +30,7 @@ const services = [
   {
     title: "Base design and implementation",
     description:
-      "We set up your Airtable from scratch — tables, views, relationships, permissions. Not from a template. Designed around how your organization actually works.",
+      "We set up your Airtable from scratch: tables, views, relationships, permissions. Not from a template. Designed around how your organization actually works.",
   },
   {
     title: "Workflow automation",
@@ -40,7 +40,7 @@ const services = [
   {
     title: "Data migration",
     description:
-      "Moving from spreadsheets, Zapier, or whatever you're using now. One client was paying a lot for Zapier — we moved them to native Airtable and cut their costs by 96%.",
+      "Moving from spreadsheets, Zapier, or whatever you're using now. One client was paying a lot for Zapier. We moved them to native Airtable and cut their costs by 96%.",
   },
   {
     title: "Custom integrations",
@@ -71,7 +71,7 @@ export default function ServicesPage() {
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
               We work with Airtable. That&rsquo;s our focus. We&rsquo;ve been
               building on it for clients in the UK, Canada, Australia, Turkey,
-              and the USA — from small startups to national foundations.
+              and the USA, from small startups to national foundations.
             </p>
           </FadeIn>
 

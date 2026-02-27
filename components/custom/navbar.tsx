@@ -21,6 +21,12 @@ export default function Navbar() {
             Services
           </Link>
           <Link
+            href="/tools"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Tools
+          </Link>
+          <Link
             href="/stories"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
