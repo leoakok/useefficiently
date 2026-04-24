@@ -14,14 +14,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: "https://useefficiently.com/about",
+      url: "https://useefficiently.com/services",
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: "https://useefficiently.com/schedule-meeting",
+      url: "https://useefficiently.com/stories",
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: "https://useefficiently.com/about",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://useefficiently.com/schedule-meeting",
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     ...customerSitemap,
   ];
